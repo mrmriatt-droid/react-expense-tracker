@@ -109,6 +109,9 @@ button:hover {
   .expense-list {
     padding: 16px;
   }
+  .category-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .exs{
@@ -269,12 +272,6 @@ button:hover {
 .category-card strong {
   color: #6b4f3a;
   font-size: 18px;
-}
-
-@media (max-width: 600px) {
-  .category-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .category-select {
