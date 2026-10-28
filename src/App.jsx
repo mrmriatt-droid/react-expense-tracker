@@ -12,19 +12,10 @@ const categories = [
 
 function App() {
   //نسترجع المصروفات
-const [expenses, setExpenses] = useState(() => {
-  try {
+  const [expenses, setExpenses] = useState(() => {
     const savedExpenses = localStorage.getItem("expenses");
-    const parsedExpenses = savedExpenses
-      ? JSON.parse(savedExpenses)
-      : [];
-
-    return Array.isArray(parsedExpenses) ? parsedExpenses : [];
-  } catch (error) {
-    console.error("Error loading expenses:", error);
-    return [];
-  }
-});
+    return savedExpenses ? JSON.parse(savedExpenses) : [];
+  });
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
   const [search, setSearch] = useState("");
